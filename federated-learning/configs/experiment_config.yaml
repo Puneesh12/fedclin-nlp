@@ -1,0 +1,52 @@
+# FedClinNLP Federated Experiment Configuration
+experiment_name: "fedclin_distilbert_bio_baseline"
+version: "2.4.1"
+random_seed: 42
+
+model:
+  name: "distilbert-bio"
+  base_architecture: "distilbert-base-uncased"
+  vocab_size: 28996
+  hidden_dim: 768
+  num_layers: 6
+  num_heads: 12
+  num_labels_ner: 5
+  num_labels_triage: 3
+
+federated:
+  strategy: "FedAvg"
+  num_clients: 3
+  rounds: 20
+  fraction_fit: 1.0
+  fraction_evaluate: 1.0
+  min_fit_clients: 3
+  min_available_clients: 3
+
+training:
+  local_epochs: 3
+  batch_size: 8
+  learning_rate: 2.0e-5
+  weight_decay: 0.01
+  max_seq_length: 512
+
+privacy:
+  differential_privacy: true
+  epsilon_target: 1.5
+  delta: 1.0e-5
+  max_grad_norm: 1.0
+  noise_multiplier: 1.1
+
+dataset:
+  partition_strategy: "non_iid_dirichlet"
+  dirichlet_alpha: 0.5
+  total_samples: 55450
+  hospitals:
+    - name: "Hospital Node A"
+      specialization: "Cardiology"
+      sample_share: 0.33
+    - name: "Hospital Node B"
+      specialization: "Oncology"
+      sample_share: 0.26
+    - name: "Hospital Node C"
+      specialization: "General Medicine"
+      sample_share: 0.41

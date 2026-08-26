@@ -1,0 +1,37 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.frontend
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:5000/api/v1
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.backend
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - FASTAPI_NLP_URL=http://nlp-service:8000
+    depends_on:
+      - nlp-service
+
+  nlp-service:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.nlp
+    ports:
+      - "8000:8000"
+
+  flower-server:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.flower
+    ports:
+      - "8080:8080"
