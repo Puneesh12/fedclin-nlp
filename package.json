@@ -1,0 +1,23 @@
+{
+  "name": "fedclin-nlp-workspace",
+  "version": "1.0.0",
+  "description": "Federated Learning for Privacy-Preserving Clinical NLP Platform",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "preview:frontend": "npm --prefix frontend run preview",
+    "lint:frontend": "npm --prefix frontend run lint"
+  },
+  "keywords": [
+    "federated-learning",
+    "clinical-nlp",
+    "distilbert-bio",
+    "privacy-preserving",
+    "flower",
+    "healthcare-ai",
+    "fedavg"
+  ],
+  "author": "Puneesh12 <puneeshgulati05@gmail.com>",
+  "license": "MIT"
+}
