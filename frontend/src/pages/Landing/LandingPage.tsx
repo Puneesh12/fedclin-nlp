@@ -5,6 +5,10 @@ import { HeroSection } from '@/components/landing/HeroSection'
 import { ValuePropSection } from '@/components/landing/ValuePropSection'
 import { FederatedFlowVisualizer } from '@/components/landing/FederatedFlowVisualizer'
 import { ClinicalAIShowcase } from '@/components/landing/ClinicalAIShowcase'
+import { EHRInteractiveDemo } from '@/components/landing/EHRInteractiveDemo'
+import { NonIIDSection } from '@/components/landing/NonIIDSection'
+import { SecuritySection } from '@/components/landing/SecuritySection'
+import { CTASection } from '@/components/landing/CTASection'
 
 export const LandingPage: React.FC = () => {
   return (
@@ -15,6 +19,10 @@ export const LandingPage: React.FC = () => {
         <ValuePropSection />
         <FederatedFlowVisualizer />
         <ClinicalAIShowcase />
+        <EHRInteractiveDemo />
+        <NonIIDSection />
+        <SecuritySection />
+        <CTASection />
       </main>
       <Footer />
     </div>
