@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { LandingPage } from '@/pages/Landing/LandingPage'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
 import { OverviewPage } from '@/pages/Dashboard/OverviewPage'
+import { PatientsListPage } from '@/pages/Patients/PatientsListPage'
+import { PatientDetailPage } from '@/pages/Patients/PatientDetailPage'
 import {
-  PatientsListPage,
-  PatientDetailPage,
   ClinicalAIPage,
   FederatedLearningPage,
   AnalyticsPage,

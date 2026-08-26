@@ -1,19 +1,5 @@
 import React from 'react'
 
-export const PatientsListPage: React.FC = () => (
-  <div className="space-y-6">
-    <h1 className="text-2xl font-bold text-[#111827]">Patient Management & Triage</h1>
-    <p className="text-sm text-[#667085]">Search and triage de-identified EHR records across hospital nodes.</p>
-  </div>
-)
-
-export const PatientDetailPage: React.FC = () => (
-  <div className="space-y-6">
-    <h1 className="text-2xl font-bold text-[#111827]">Clinical Patient Detail</h1>
-    <p className="text-sm text-[#667085]">Deep-dive EHR note, NER extraction, and AI triage assessment.</p>
-  </div>
-)
-
 export const ClinicalAIPage: React.FC = () => (
   <div className="space-y-6">
     <h1 className="text-2xl font-bold text-[#111827]">Clinical AI Workbench</h1>
