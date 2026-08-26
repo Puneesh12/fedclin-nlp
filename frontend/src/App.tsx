@@ -7,8 +7,8 @@ import { PatientsListPage } from '@/pages/Patients/PatientsListPage'
 import { PatientDetailPage } from '@/pages/Patients/PatientDetailPage'
 import { ClinicalAIPage } from '@/pages/ClinicalAI/ClinicalAIPage'
 import { FederatedLearningPage } from '@/pages/FederatedLearning/FederatedLearningPage'
+import { AnalyticsPage } from '@/pages/Analytics/AnalyticsPage'
 import {
-  AnalyticsPage,
   AuditLogsPage,
   SettingsPage,
 } from '@/pages/Dashboard/PageShells'

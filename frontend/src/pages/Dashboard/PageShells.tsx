@@ -1,12 +1,5 @@
 import React from 'react'
 
-export const AnalyticsPage: React.FC = () => (
-  <div className="space-y-6">
-    <h1 className="text-2xl font-bold text-[#111827]">Research Analytics & Benchmarking</h1>
-    <p className="text-sm text-[#667085]">Centralized vs Federated performance comparison and Non-IID skew analysis.</p>
-  </div>
-)
-
 export const AuditLogsPage: React.FC = () => (
   <div className="space-y-6">
     <h1 className="text-2xl font-bold text-[#111827]">Cryptographic Audit Logs</h1>
