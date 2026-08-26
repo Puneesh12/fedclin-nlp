@@ -8,10 +8,8 @@ import { PatientDetailPage } from '@/pages/Patients/PatientDetailPage'
 import { ClinicalAIPage } from '@/pages/ClinicalAI/ClinicalAIPage'
 import { FederatedLearningPage } from '@/pages/FederatedLearning/FederatedLearningPage'
 import { AnalyticsPage } from '@/pages/Analytics/AnalyticsPage'
-import {
-  AuditLogsPage,
-  SettingsPage,
-} from '@/pages/Dashboard/PageShells'
+import { AuditLogsPage } from '@/pages/AuditLogs/AuditLogsPage'
+import { SettingsPage } from '@/pages/Settings/SettingsPage'
 
 export const App: React.FC = () => {
   return (
