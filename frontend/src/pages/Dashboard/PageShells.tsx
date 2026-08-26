@@ -1,12 +1,5 @@
 import React from 'react'
 
-export const ClinicalAIPage: React.FC = () => (
-  <div className="space-y-6">
-    <h1 className="text-2xl font-bold text-[#111827]">Clinical AI Workbench</h1>
-    <p className="text-sm text-[#667085]">Interactive EHR note summarization, entity extraction, and triage simulation.</p>
-  </div>
-)
-
 export const FederatedLearningPage: React.FC = () => (
   <div className="space-y-6">
     <h1 className="text-2xl font-bold text-[#111827]">Federated Learning Operations</h1>

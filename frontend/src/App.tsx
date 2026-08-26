@@ -5,8 +5,8 @@ import { DashboardLayout } from '@/components/layout/DashboardLayout'
 import { OverviewPage } from '@/pages/Dashboard/OverviewPage'
 import { PatientsListPage } from '@/pages/Patients/PatientsListPage'
 import { PatientDetailPage } from '@/pages/Patients/PatientDetailPage'
+import { ClinicalAIPage } from '@/pages/ClinicalAI/ClinicalAIPage'
 import {
-  ClinicalAIPage,
   FederatedLearningPage,
   AnalyticsPage,
   AuditLogsPage,
