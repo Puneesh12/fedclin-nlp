@@ -2,8 +2,8 @@ import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { LandingPage } from '@/pages/Landing/LandingPage'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
+import { OverviewPage } from '@/pages/Dashboard/OverviewPage'
 import {
-  OverviewPage,
   PatientsListPage,
   PatientDetailPage,
   ClinicalAIPage,
