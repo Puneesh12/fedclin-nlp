@@ -1,12 +1,5 @@
 import React from 'react'
 
-export const FederatedLearningPage: React.FC = () => (
-  <div className="space-y-6">
-    <h1 className="text-2xl font-bold text-[#111827]">Federated Learning Operations</h1>
-    <p className="text-sm text-[#667085]">Flower FedAvg round control, hospital weight updates, and topology.</p>
-  </div>
-)
-
 export const AnalyticsPage: React.FC = () => (
   <div className="space-y-6">
     <h1 className="text-2xl font-bold text-[#111827]">Research Analytics & Benchmarking</h1>
