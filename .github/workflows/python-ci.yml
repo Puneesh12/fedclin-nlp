@@ -1,0 +1,38 @@
+name: Python NLP & FL Testing CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'nlp-service/**'
+      - 'federated-learning/**'
+      - 'research/**'
+  pull_request:
+    branches: [main]
+
+jobs:
+  python-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install fastapi uvicorn pydantic pytest httpx
+
+      - name: Run NLP Service tests
+        run: |
+          cd nlp-service && pytest tests/
+
+      - name: Run Partitioning & FL tests
+        run: |
+          PYTHONPATH=federated-learning pytest federated-learning/tests/
+
+      - name: Run Research Benchmarks tests
+        run: |
+          PYTHONPATH=research pytest research/tests/
