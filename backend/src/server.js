@@ -1,6 +1,11 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import { auditLoggerMiddleware } from './middleware/audit.middleware.js'
+import { rateLimiter } from './middleware/security.middleware.js'
+import { loginUser, verifySession } from './controllers/auth.controller.js'
+import { getPatients, getPatientById } from './controllers/patient.controller.js'
+import nlpRouter from './routes/nlp.routes.js'
 
 dotenv.config()
 
@@ -9,6 +14,8 @@ const PORT = process.env.PORT || 5050
 
 app.use(cors({ origin: '*' }))
 app.use(express.json())
+app.use(rateLimiter())
+app.use(auditLoggerMiddleware)
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -20,20 +27,16 @@ app.get('/health', (req, res) => {
   })
 })
 
-// Authentication Mock / Pass-through
-app.post('/api/v1/auth/login', (req, res) => {
-  const { email } = req.body
-  res.json({
-    token: 'jwt_mock_token_fedclin_' + Date.now(),
-    user: {
-      id: 'usr-1',
-      name: 'Puneesh Gulati',
-      email: email || 'puneeshgulati05@gmail.com',
-      role: 'Doctor',
-      hospitalAffiliation: 'Hospital Node A (Cardiology)',
-    },
-  })
-})
+// Authentication Routes
+app.post('/api/v1/auth/login', loginUser)
+app.get('/api/v1/auth/session', verifySession)
+
+// Patient Records Routes
+app.get('/api/v1/patients', getPatients)
+app.get('/api/v1/patients/:id', getPatientById)
+
+// Clinical NLP Inference Proxy
+app.use('/api/v1/nlp', nlpRouter)
 
 // FL Coordination Status endpoint
 app.get('/api/v1/federated/status', (req, res) => {
