@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from app.schemas import NoteAnalysisRequest, NoteAnalysisResponse, ClinicalEntity, ClinicalSummary, TriageAssessment
+from app.core.middleware import ObservabilityMiddleware
 
 app = FastAPI(
     title="FedClinNLP Inference Microservice",
@@ -10,6 +11,7 @@ app = FastAPI(
     description="Python FastAPI DistilBERT-Bio Clinical NLP Inference Engine"
 )
 
+app.add_middleware(ObservabilityMiddleware)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
