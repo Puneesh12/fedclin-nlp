@@ -117,6 +117,29 @@ PLAN: Continuous nebulized Albuterol + Ipratropium. IV Methylprednisolone 60mg s
       { id: 'e35', text: 'nebulized Albuterol + Ipratropium', category: 'procedure', confidence: 0.96, ontologyCode: 'SNOMED: 371530005', startIndex: 335, endIndex: 368 },
     ],
   },
+  {
+    title: 'Kaggle MTSamples: Congestive Heart Failure',
+    specialty: 'Cardiovascular (Kaggle Dataset)',
+    triage: 'YELLOW',
+    note: `SUBJECTIVE: A 71-year-old female with ischemic cardiomyopathy (EF 30%) presents with progressive shortness of breath, 3-pillow orthopnea, and bilateral lower extremity edema worsening over 5 days.
+OBJECTIVE: Vitals: BP 152/88 mmHg, HR 96 bpm, RR 22/min, SpO2 91% on room air. Jugular venous distension noted at 8 cm. Bibasilar pulmonary crackles on auscultation. 3+ pitting pedal edema bilaterally. BNP elevated at 1,450 pg/mL.
+ASSESSMENT: Acute decompensated heart failure exacerbation secondary to dietary sodium indiscretion.
+PLAN: Admit to telemetry. Administer IV Furosemide 80 mg stat. Continue carvedilol and lisinopril. Fluid restriction to 1.5 L/day.`,
+    summary: {
+      chiefComplaint: 'Acute decompensated congestive heart failure with orthopnea and peripheral edema.',
+      clinicalImpression: 'Fluid overload crisis requiring immediate IV loop diuresis and inpatient telemetry monitoring.',
+      riskFactors: ['BNP 1,450 pg/mL', 'Ischemic cardiomyopathy (EF 30%)', 'Bilateral 3+ pitting edema'],
+      actions: ['IV Furosemide 80mg stat', 'Strict 1.5L fluid restriction', 'Continuous telemetry monitoring'],
+    },
+    entities: [
+      { id: 'e40', text: 'shortness of breath', category: 'symptom', confidence: 0.98, ontologyCode: 'SNOMED: 267036007', startIndex: 88, endIndex: 107 },
+      { id: 'e41', text: 'orthopnea', category: 'symptom', confidence: 0.97, ontologyCode: 'SNOMED: 68673006', startIndex: 118, endIndex: 127 },
+      { id: 'e42', text: 'pedal edema', category: 'symptom', confidence: 0.96, ontologyCode: 'SNOMED: 267038008', startIndex: 160, endIndex: 171 },
+      { id: 'e43', text: 'ischemic cardiomyopathy', category: 'diagnosis', confidence: 0.98, ontologyCode: 'ICD-10: I25.5', startIndex: 35, endIndex: 58 },
+      { id: 'e44', text: 'BNP 1,450 pg/mL', category: 'lab_value', confidence: 0.99, ontologyCode: 'LOINC: 30934-4', startIndex: 380, endIndex: 395 },
+      { id: 'e45', text: 'IV Furosemide 80 mg', category: 'medication', confidence: 0.98, ontologyCode: 'RxNorm: 4603', startIndex: 520, endIndex: 539 },
+    ],
+  },
 ]
 
 export const ClinicalAIPage: React.FC = () => {

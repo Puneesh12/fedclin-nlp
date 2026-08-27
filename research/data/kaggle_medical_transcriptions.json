@@ -1,0 +1,56 @@
+[
+  {
+    "id": "kaggle-mts-001",
+    "sample_name": "Cardiology - STEMI & Cardiac Catheterization",
+    "medical_specialty": "Cardiovascular / Pulmonary",
+    "description": "Patient presenting with acute chest pain, ST-elevation myocardial infarction, and emergency cardiac catheterization.",
+    "transcription": "SUBJECTIVE: The patient is a 64-year-old male who presented to the emergency department with severe, crushing substernal chest pain radiating to his left arm and jaw, accompanied by diaphoresis and acute shortness of breath. Symptoms began 2 hours prior to arrival.\n\nOBJECTIVE: Physical exam reveals an anxious male in acute distress. Blood pressure 168/98 mmHg, heart rate 118 bpm, respiratory rate 24/min, SpO2 92% on room air. 12-lead ECG demonstrates acute ST-segment elevation in leads V1 through V4 consistent with acute anterior wall STEMI. Serum troponin I is markedly elevated at 4.8 ng/mL.\n\nASSESSMENT: Acute anterior ST-elevation myocardial infarction. Hypertensive urgency.\n\nPLAN: Immediate activation of Cardiac Catheterization Laboratory for primary percutaneous coronary intervention (PCI). Administered loading doses of Aspirin 325 mg PO and Clopidogrel 600 mg PO. Initiated IV Heparin drip and supplemental oxygen.",
+    "target_triage": "RED",
+    "hospital_partition": "Hospital Node A (Cardiology Hub)"
+  },
+  {
+    "id": "kaggle-mts-002",
+    "sample_name": "Cardiology - Congestive Heart Failure Exacerbation",
+    "medical_specialty": "Cardiovascular / Pulmonary",
+    "description": "Acute decompensated congestive heart failure with orthopnea and peripheral edema.",
+    "transcription": "SUBJECTIVE: A 71-year-old female with known history of ischemic cardiomyopathy (EF 30%) presents with progressive shortness of breath, 3-pillow orthopnea, and bilateral lower extremity edema worsening over 5 days.\n\nOBJECTIVE: Vitals: BP 152/88 mmHg, HR 96 bpm, RR 22/min, SpO2 91% on room air. Jugular venous distension noted at 8 cm. Bibasilar pulmonary crackles on auscultation. 3+ pitting pedal edema bilaterally. Chest X-ray reveals pulmonary vascular congestion and cardiomegaly. BNP elevated at 1,450 pg/mL.\n\nASSESSMENT: Acute decompensated heart failure exacerbation secondary to dietary sodium indiscretion.\n\nPLAN: Admit to telemetry unit. Administered IV Furosemide 80 mg stat. Continue carvedilol and lisinopril. Fluid restriction to 1.5 L/day and low-sodium diet.",
+    "target_triage": "YELLOW",
+    "hospital_partition": "Hospital Node A (Cardiology Hub)"
+  },
+  {
+    "id": "kaggle-mts-003",
+    "sample_name": "Oncology - Febrile Neutropenia Post-Chemotherapy",
+    "medical_specialty": "Hematology - Oncology",
+    "description": "Patient with metastatic breast cancer status post cycle 3 docetaxel presenting with high fevers and severe neutropenia.",
+    "transcription": "SUBJECTIVE: A 52-year-old female receiving adjuvant chemotherapy for invasive ductal carcinoma of the right breast presents with sudden onset of shaking chills and fever up to 38.8°C at home.\n\nOBJECTIVE: Vitals: Temperature 38.6°C, BP 112/70 mmHg, HR 108 bpm, RR 20/min. Port-a-cath site is clean without erythema or purulence. CBC reveals absolute neutrophil count (ANC) of 320/mcL (critical neutropenia), hemoglobin 9.4 g/dL, platelets 145,000/mcL.\n\nASSESSMENT: Post-chemotherapy febrile neutropenia, high risk for bacteremia.\n\nPLAN: Immediate admission to Oncology protective isolation. Draw 2 sets of blood cultures (peripheral and port). Start empiric broad-spectrum IV Cefepime 2g every 8 hours. Initiate daily subcutaneous Filgrastim (G-CSF) 300 mcg.",
+    "target_triage": "YELLOW",
+    "hospital_partition": "Hospital Node B (Cancer Center)"
+  },
+  {
+    "id": "kaggle-mts-004",
+    "sample_name": "Oncology - Malignant Pleural Effusion Evaluation",
+    "medical_specialty": "Hematology - Oncology",
+    "description": "Patient with non-small cell lung carcinoma presenting with refractory dyspnea and pleural fluid accumulation.",
+    "transcription": "SUBJECTIVE: A 66-year-old male with Stage IV lung adenocarcinoma presents with persistent left-sided pleuritic chest discomfort and progressive dyspnea on minimal exertion.\n\nOBJECTIVE: Diminished breath sounds over the left lower lung base. Thoracic ultrasound demonstrates moderate-to-large free-flowing left pleural effusion. Diagnostic and therapeutic thoracentesis performed with removal of 950 mL of serosanguinous fluid. Cytology confirmed malignant cells.\n\nASSESSMENT: Recurrent malignant pleural effusion in advanced non-small cell lung cancer.\n\nPLAN: Oncology consultation for consideration of indwelling pleural catheter placement vs chemical pleurodesis. Optimized pain regimen with scheduled acetaminophen and PRN hydromorphone.",
+    "target_triage": "YELLOW",
+    "hospital_partition": "Hospital Node B (Cancer Center)"
+  },
+  {
+    "id": "kaggle-mts-005",
+    "sample_name": "Emergency Medicine - Acute Anaphylaxis",
+    "medical_specialty": "Emergency Medicine",
+    "description": "Severe systemic allergic reaction following inadvertent peanut ingestion with stridor and hypotension.",
+    "transcription": "SUBJECTIVE: A 28-year-old female is brought by emergency medical services with acute respiratory distress, generalized urticaria, and facial angioedema occurring 15 minutes after eating a cookie.\n\nOBJECTIVE: Patient is in marked distress with audible inspiratory stridor. Blood pressure 84/50 mmHg, heart rate 132 bpm, SpO2 88% on room air. Diffuse wheezing throughout lung fields. Marked periorbital and lip swelling.\n\nASSESSMENT: Acute severe anaphylactic shock with upper airway compromise.\n\nPLAN: Immediate intramuscular Epinephrine 0.3 mg (1:1000) administered into anterolateral thigh. High-flow oxygen via non-rebreather mask. IV access secured; 1 L normal saline bolus given. Administered IV Methylprednisolone 125 mg, IV Diphenhydramine 50 mg, and nebulized Albuterol.",
+    "target_triage": "RED",
+    "hospital_partition": "Hospital Node C (Metropolitan General)"
+  },
+  {
+    "id": "kaggle-mts-006",
+    "sample_name": "General Medicine - Routine Ambulatory Health Check",
+    "medical_specialty": "General Medicine",
+    "description": "Annual physical examination in an asymptomatic 45-year-old male with well-controlled hypertension.",
+    "transcription": "SUBJECTIVE: Patient presents for scheduled annual health maintenance visit. No active complaints. Denies chest pain, palpitations, shortness of breath, headache, or visual changes. Reports adherence to daily antihypertensive therapy.\n\nOBJECTIVE: Well-nourished male in no acute distress. Blood pressure 124/78 mmHg, heart rate 72 bpm regular, respiratory rate 14/min, SpO2 99%. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm without murmurs. Abdomen soft and non-tender.\n\nASSESSMENT: Essential hypertension, well-controlled on current medical therapy. Routine preventive health maintenance.\n\nPLAN: Renew Lisinopril 10 mg daily for 1 year. Fasting lipid panel and HbA1c ordered. Encouraged Mediterranean diet and regular aerobic exercise. Follow-up in 12 months.",
+    "target_triage": "GREEN",
+    "hospital_partition": "Hospital Node C (Metropolitan General)"
+  }
+]
