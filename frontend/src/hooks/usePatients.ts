@@ -13,7 +13,9 @@ export function usePatients() {
       const matchesSearch =
         patient.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         patient.mrn.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        patient.admissionReason.toLowerCase().includes(searchQuery.toLowerCase())
+        patient.triageReason.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        patient.rawClinicalNote.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (patient.summary?.chiefComplaint && patient.summary.chiefComplaint.toLowerCase().includes(searchQuery.toLowerCase()))
 
       const matchesTriage = selectedTriage === 'ALL' || patient.triageStatus === selectedTriage
       const matchesHospital = selectedHospital === 'ALL' || patient.hospitalOrigin.includes(selectedHospital)
